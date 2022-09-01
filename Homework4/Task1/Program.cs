@@ -5,14 +5,18 @@
 // 2, 4 -> 16
 
 Console.Write("Введите число А: ");
-double num_a = Convert.ToDouble(Console.ReadLine());
+int num_a = Convert.ToInt32(Console.ReadLine());
 
 Console.Write("Введите число B: ");
-double num_b = Convert.ToDouble(Console.ReadLine());
+int num_b = Convert.ToInt32(Console.ReadLine());
 
-double Result(double num_a, double num_b)
+int Result(int num_a, int num_b)
 {
-    double res = Math.Pow(num_a, num_b);
+    int res = num_a;
+    for (int i = 1; i < num_b; i++)
+    {
+        res = res * num_a;
+    }
     return res;
 }
 
