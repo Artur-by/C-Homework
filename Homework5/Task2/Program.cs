@@ -22,7 +22,7 @@ void PrintArray(int[] array)
 void SumEvenIndex(int[] array)
 {
     int sumEven = 0;
-    for (int i = 0; i < array.Length; i += 2)
+    for (int i = 1; i < array.Length; i += 2)
     {
         sumEven = array[i] + sumEven;
     }
