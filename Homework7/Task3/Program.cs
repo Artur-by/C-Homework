@@ -31,9 +31,8 @@ void PrintArray(int[,] array)
     }
 }
 
-double[] Average(int[,] array)
+void Average(int[,] array)
 {
-    double[] averegeArray = new double[array.GetLength(1)];
     double sum = 0;
     for (int i = 0; i < array.GetLength(1); i++)
     {
@@ -41,10 +40,11 @@ double[] Average(int[,] array)
         {
             sum = sum + array[j, i];
         }
-        averegeArray[i] = Math.Round(sum / array.GetLength(0), 2);
+        Console.WriteLine();
+        double averege = Math.Round(sum / array.GetLength(0), 2);
+        Console.Write($"Среднее арифметическое {i + 1}-го столбца:  {averege}");
         sum = 0;
     }
-    return averegeArray;
 }
 
 Console.Write("Введите количество строк массива: ");
@@ -52,12 +52,5 @@ int lenArray = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите количество столбцов массива: ");
 int widthArray = Convert.ToInt32(Console.ReadLine());
 int[,] myArray = CreateArray(lenArray, widthArray);
-
 PrintArray(myArray);
-
-double[] result = Average(myArray);
-System.Console.WriteLine("Среднее арифметическое каждого столбца:");
-foreach (var item in result)
-{
-    Console.Write($" {item};  ");
-}
+Average(myArray);
