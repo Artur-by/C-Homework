@@ -3,9 +3,9 @@
 // M = 1; N = 15-> 120
 // M = 4; N = 8. -> 30
 
-Console.Write("Введите начальное число M: ");
+Console.Write("Введите начальное натуральное число M: ");
 int numberM = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите конечное число N: ");
+Console.Write("Введите конечное натуральное число N: ");
 int numberN = Convert.ToInt32(Console.ReadLine());
 
 int Sum(int start, int stop)
